@@ -26,12 +26,15 @@ filetype plugin indent on    " required
 " vim +PluginInstall +qall
 " Put your non-Plugin stuff after this line
 
-syntax on
-" Line numbers
-set number
-
 colorscheme onedark
 let g:airline_theme='molokai'
+
+" syntax coloring
+syntax on
+
+" line numbers
+set number
+
 " automatically change pwd to dir of current opened file
 set autochdir
 
@@ -44,7 +47,6 @@ if !isdirectory($HOME.'/.vim/files') && exists('*mkdir')
   call mkdir($HOME.'/.vim/files/undo')
   call mkdir($HOME.'/.vim/files/info')
 endif
-
 " backup files
 set backup
 set backupdir   =$HOME/.vim/files/backup/
@@ -58,6 +60,9 @@ set undodir     =$HOME/.vim/files/undo/
 " viminfo files
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+" enable search highlighting
 set hls
+" enable hidden buffers
 set hidden
+" vertical split by default with :diffspl cmd
 set diffopt=vertical
