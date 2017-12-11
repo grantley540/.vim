@@ -1,9 +1,9 @@
 # ignore everything
 *
-
 # except
 !.gitignore
 !vimrc
+!Makefile
 !bundle/
 !bundle/Vundle.vim/
 !bundle/Vundle.vim/*
