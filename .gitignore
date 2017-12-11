@@ -5,4 +5,5 @@
 !.gitignore
 !vimrc
 !bundle/
-!bundle/**/*
+!bundle/Vundle.vim/
+!bundle/Vundle.vim/*
