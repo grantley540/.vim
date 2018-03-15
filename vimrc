@@ -12,6 +12,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'joshdick/onedark.vim'
 Plugin 'mbbill/undotree'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
+Plugin 'fatih/vim-go'
+"Plugin 'valloric/youcompleteme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -67,14 +69,28 @@ set hls
 set hidden
 " vertical split by default with :diffsp cmd
 set diffopt=vertical
+" write when calling :make  (for vim-go)"
+set autowrite
 
 " netrw config for Explore customization
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END netrw changes for Explore
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 25
+"augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+"augroup END netrw changes for Explore
+
+" mappings
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+
+" https://github.com/fatih/vim-go-tutorial
+" vim-go auto show info (:GoInfo)
+let g:go_auto_type_info = 1
+" vim-go auto highlighting matching identifiers
