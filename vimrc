@@ -32,6 +32,9 @@ filetype plugin indent on    " required
 colorscheme onedark
 let g:airline_theme='molokai'
 
+" enable hidden buffers
+set hidden
+
 " syntax coloring
 syntax on
 
@@ -54,7 +57,7 @@ endif
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
-" swap files
+
 set directory   =$HOME/.vim/files/swap//
 set updatecount =100
 " undo files
@@ -65,8 +68,6 @@ set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 " enable search highlighting
 set hls
-" enable hidden buffers
-set hidden
 " vertical split by default with :diffsp cmd
 set diffopt=vertical
 " write when calling :make  (for vim-go)"
@@ -94,3 +95,6 @@ autocmd FileType go nmap <Leader>i <Plug>(go-info)
 " vim-go auto show info (:GoInfo)
 let g:go_auto_type_info = 1
 " vim-go auto highlighting matching identifiers
+" mapping for next and previous buffers
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
