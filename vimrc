@@ -13,6 +13,7 @@ Plugin 'joshdick/onedark.vim'
 Plugin 'mbbill/undotree'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'fatih/vim-go'
+Plugin 'suan/vim-instant-markdown' " https://vimawesome.com/plugin/instant-markdown-vim
 "Plugin 'valloric/youcompleteme'
 
 call vundle#end()            " required
@@ -106,3 +107,7 @@ nnoremap <C-p> :bprevious<CR>
 
 " close current buffer and place previous one in current window (i think)
 nnoremap <C-c> :bp\|bd #<CR>
+
+" lexplore shortcut
+nnoremap <C-\> :Lexplore<CR>
+
